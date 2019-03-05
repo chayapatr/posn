@@ -1,1 +1,3 @@
 src/exec/
+.DS_Store
+.cache/
