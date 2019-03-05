@@ -13,11 +13,7 @@ int main(){
     for(int i=0;i<q;i++){
         int l,r,c,count=0;
         cin >> l >> r >> c;
-        for(int j=l-1;j<r;j++){
-            if(vec[j]==c){
-                count = count + 1;
-            }
-        }
+        for(int j=l-1;j<r;j++) if(vec[j]==c) count = count + 1;
         cout << count << endl;
     }
 }
