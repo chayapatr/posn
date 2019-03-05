@@ -6,7 +6,7 @@ int main(){
     string input;
     stack<int> s;
     cin >> input;
-    for(int i=0;input[i]!='\0';i++){
+    for (int i=0;input[i]!='\0';i++) {
         if(input[i]>=48 && input[i]<=57) s.push(input[i]-'0');
         if(input[i]=='+'||input[i]=='-'||input[i]=='*'||input[i]=='/'){
             int b = s.top(); s.pop();
