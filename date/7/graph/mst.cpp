@@ -1,0 +1,28 @@
+#include<iostream>
+#include<queue>
+#include<vector>
+using namespace std;
+using ii = pair<int, int>;
+int main(){
+    vector<bool> visited(1000,false);
+    vector<ii> node[1000];
+    priority_queue<ii, vector<ii>, greater<ii> > PQ;
+    int total = 0;
+    int start = 0;
+    node[0].push_back(make_pair(4,1));
+    node[0].push_back(make_pair(6,2));
+    node[0].push_back(make_pair(5,3));
+    node[1].push_back(make_pair(3,2));
+    node[3].push_back(make_pair(7,4));
+    PQ.push({0, start});
+    while(!PQ.empty()){
+        int d = PQ.top().first;
+        int n = PQ.top().second;
+        PQ.pop();
+        if(visited[n]) continue;
+        visited[n] = true;
+        for(auto el : node[n]) PQ.push(el);
+        total += d;
+    }
+    cout << total;
+}

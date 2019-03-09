@@ -7,7 +7,8 @@ int knapsack(int C, int N, int  w[], int v[]){
         for(int n=0;n<=N;n++){
             for(int c=0;c<=C;c++){
                 if (n == 0 && c == 0) K[c][n] = 0;
-                else if (w[n-1] <= c) K[c][n] = max(v[n-1] + K[c-w[n-1]][n-1], K[c][n-1]);
+                else if (w[n-1] <= c)
+                K[c][n] = max(v[n-1] + K[c-w[n-1]][n-1], K[c][n-1]);
                 else K[c][n] = K[c][n-1];
                 cout << c << " " << n << " " << K[c][n] << endl;
             }

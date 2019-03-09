@@ -21,7 +21,8 @@ int main(){
         PQ.pop();
         if(visited[v]) continue;
         cout << v << " " << u << endl;
-        for(int i=0;i<adj[v].size();i++) PQ.push(make_pair(-adj[v][i].first, adj[v][i].second));
+        for(int i=0;i<adj[v].size();i++)
+        PQ.push(make_pair(-adj[v][i].first, adj[v][i].second));
         total+=u;
         visited[v] = true;
     }
