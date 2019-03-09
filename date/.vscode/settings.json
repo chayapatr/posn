@@ -6,6 +6,7 @@
         "vector": "cpp",
         "iosfwd": "cpp",
         "functional": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "tuple": "cpp"
     }
 }
