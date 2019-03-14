@@ -3,6 +3,8 @@
 using namespace std;
 int main(){
     int q,n;
+    cin.tie(0);
+    cin.sync_with_stdio(false);
     cin >> n >> q;
     vector<int> vec;
     for(int i=0;i<n;i++){
