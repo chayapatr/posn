@@ -28,7 +28,7 @@ int main(){
         for(auto el : node[n]) {
             int u = el.first;
             int v = el.second;
-            if(!visited[u] && dis[n] + u < dis[v]){
+            if(!visited[v] && dis[n] + u < dis[v]){
                 dis[v] = dis[n] + u;
                 PQ.push({dis[v], v});
             }

@@ -15,11 +15,11 @@ int main(){
 	auto min = min_element(begin(n), end(n));
 	auto max = max_element(begin(n), end(n));
 	while (*min<*max-k){
-        while (*min<*max-k){
-            day++;
-		    *min = *min + 1;
-		    *max = *max - 1;
-        }
+		while (*min<*max-k){
+			day++;
+			*min = *min + 1;
+			*max = *max - 1;
+		}
 		min = min_element(begin(n), end(n));
 		max = max_element(begin(n), end(n));
 		cout << endl;
